@@ -16,8 +16,6 @@
 <input ng-model="hangman.letterChoice">
 
 <button ng-click="hangman.tick()">Check</button>
-
-<div>{{ hangman.wordSoFar }}</div>
 <div><span ng-repeat="letter in hangman.lettersUsed">{{ letter }}</div>
 </body>
 </html>
