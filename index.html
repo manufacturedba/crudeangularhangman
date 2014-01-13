@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="hangmanApp">
+<head>
+<title>Hangman</title>
+<script src="lib/angular/angular.js"></script>
+<script src="js/hangman.js"></script>
+</head>
+<body ng-controller="hangmanCtrl as hangman">
+<h1>
+	{{ hangman.uncovered }}
+</h1>
+<div id="attempts">
+{{ hangman.tries - hangman.fails }}
+</div>
+
+<input ng-model="hangman.letterChoice">
+
+<button ng-click="hangman.tick()">Check</button>
+
+<div>{{ hangman.wordSoFar }}</div>
+<div><span ng-repeat="letter in hangman.lettersUsed">{{ letter }}</div>
+</body>
+</html>
